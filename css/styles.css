@@ -227,41 +227,42 @@ body {
 }
 /*--------------------HERO-------------------------*/
 .hero {
-  max-width: 1440px;
-  min-height: 600px;
+  max-width: 428px;
+  min-height: 432px;
   margin-left: auto;
   margin-right: auto;
-  padding-top: 188px;
-  padding-bottom: 188px;
+  padding-top: 112px;
+  padding-bottom: 112px;
 
   text-align: center;
 
-  background-color: var(--hero-background-color);
+  background-color: var(--title-color);
   background-image: var(--line-grad), url(../images/hero-img.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
 }
 .hero-title {
+  max-width: 320px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 48px;
-  max-width: 496px;
+  margin-bottom: 72px;
 
   font-weight: 700;
-  font-size: 56px;
-  line-height: 1.07;
+  font-size: 36px;
+  line-height: 1.11;
   letter-spacing: 0.02em;
-  color: var(--hero-title-color);
+  text-transform: capitalize;
+  color: var(--secondary-accent-color);
 }
 .hero-btn {
   display: inline-block;
   padding: 16px 32px;
   border-radius: 4px;
 
-  color: var(--hero-btn-color);
+  color: var(--secondary-accent-color);
 
-  background: var(--hero-background-btn-color);
+  background: var(--interactive-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 
   transition: background 250ms var(--timeing-function),
@@ -274,46 +275,24 @@ body {
 }
 /*--------------------FEATURES-------------------------*/
 .features {
-  padding-top: 120px;
-  padding-bottom: 120px;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 .features-list {
   display: flex;
   flex-wrap: wrap;
+  row-gap: 72px;
+  column-gap: 24px;
 }
 .features-item {
-  width: calc((100% - 3 * 24px) / 4);
-}
-.features-item:not(:last-child) {
-  margin-right: 24px;
-}
-.features-item::before {
-  content: '';
-  display: block;
-  height: 112px;
-
-  background-color: var(--btn-background-color);
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: auto;
-}
-.icon-antenna::before {
-  background-image: url(../images/antenna.svg);
-}
-.icon-clock::before {
-  background-image: url(../images/clock.svg);
-}
-.icon-diagram::before {
-  background-image: url(../images/diagram.svg);
-}
-.icon-astronaut::before {
-  background-image: url(../images/astronaut.svg);
+  width: 100%;
 }
 .features-subtitle {
   margin-bottom: 8px;
 
   font-weight: 500;
   font-size: 20px;
+  text-align: center;
   line-height: 1.2;
   letter-spacing: 0.02em;
   color: var(--title-color);
@@ -936,10 +915,36 @@ body {
   box-shadow: none;
 }
 
+@media screen and (max-width: 1200px) {
+  .content {
+    display: none;
+  }
+}
+
 @media screen and (min-width: 768px) {
   .container {
     max-width: 766px;
   }
+  .hero {
+    max-width: 768px;
+    min-height: 436px;
+    padding-bottom: 108px;
+  }
+  .hero-title {
+    max-width: 496px;
+    margin-bottom: 40px;
+
+    font-size: 56px;
+    line-height: 1.07;
+  }
+
+  .features-subtitle {
+    text-align: start;
+  }
+  .features-item {
+    width: calc((100% - 24px) / 2);
+  }
+
   .customers-list {
     column-gap: 24px;
   }
@@ -957,6 +962,45 @@ body {
 @media screen and (min-width: 1200px) {
   .container {
     max-width: 1158px;
+  }
+  .hero {
+    max-width: 1440px;
+    min-height: 600px;
+    padding-top: 188px;
+    padding-bottom: 188px;
+  }
+  .hero-title {
+    margin-bottom: 48px;
+  }
+  .features {
+    padding-top: 120px;
+    padding-bottom: 120px;
+  }
+
+  .features-item {
+    width: calc((100% - 3 * 24px) / 4);
+  }
+  .features-item::before {
+    content: '';
+    display: block;
+    height: 112px;
+
+    background-color: var(--main-background-color);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto;
+  }
+  .icon-antenna::before {
+    background-image: url(../images/antenna.svg);
+  }
+  .icon-clock::before {
+    background-image: url(../images/clock.svg);
+  }
+  .icon-diagram::before {
+    background-image: url(../images/diagram.svg);
+  }
+  .icon-astronaut::before {
+    background-image: url(../images/astronaut.svg);
   }
   .customers {
     padding-top: 120px;
