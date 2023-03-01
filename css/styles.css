@@ -290,14 +290,16 @@ body {
 .features-subtitle {
   margin-bottom: 8px;
 
-  font-weight: 500;
-  font-size: 20px;
+  font-weight: 700;
+  font-size: 36px;
   text-align: center;
-  line-height: 1.2;
+  line-height: 1.11;
   letter-spacing: 0.02em;
+  text-transform: capitalize;
   color: var(--title-color);
 }
 .faetures-text {
+  font-weight: 500;
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
@@ -976,7 +978,14 @@ body {
     padding-top: 120px;
     padding-bottom: 120px;
   }
-
+  .features-subtitle {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 1.2;
+  }
+  .faetures-text {
+    font-weight: 400;
+  }
   .features-item {
     width: calc((100% - 3 * 24px) / 4);
   }
