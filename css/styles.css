@@ -306,27 +306,7 @@ body {
 }
 /*--------------------CONTENT-------------------------*/
 .content {
-  padding-bottom: 120px;
-}
-.content-list {
-  display: flex;
-  flex-wrap: wrap;
-}
-.content-title {
-  margin-bottom: 72px;
-
-  font-size: 36px;
-  line-height: 1.11;
-  letter-spacing: 0.02em;
-  text-transform: capitalize;
-  text-align: center;
-  color: var(--title-color);
-}
-.content-item {
-  width: calc((100% - 2 * 24px) / 3);
-}
-.content-item:not(:last-child) {
-  margin-right: 24px;
+  display: none;
 }
 /*--------------------TEAM-------------------------*/
 .team {
@@ -917,12 +897,6 @@ body {
   box-shadow: none;
 }
 
-@media screen and (max-width: 1200px) {
-  .content {
-    display: none;
-  }
-}
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 766px;
@@ -1010,6 +984,30 @@ body {
   }
   .icon-astronaut::before {
     background-image: url(../images/astronaut.svg);
+  }
+  .content {
+    display: block;
+    padding-bottom: 120px;
+  }
+  .content-list {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .content-title {
+    margin-bottom: 72px;
+
+    font-size: 36px;
+    line-height: 1.11;
+    letter-spacing: 0.02em;
+    text-transform: capitalize;
+    text-align: center;
+    color: var(--title-color);
+  }
+  .content-item {
+    width: calc((100% - 2 * 24px) / 3);
+  }
+  .content-item:not(:last-child) {
+    margin-right: 24px;
   }
   .customers {
     padding-top: 120px;
