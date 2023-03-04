@@ -586,7 +586,7 @@ body {
   font-size: 16px;
   line-height: 1.5;
   letter-spacing: 0.02em;
-  color: var(--overlay-text-color);
+  color: var(--main-background-color);
 
   overflow: auto;
 }
@@ -1061,6 +1061,9 @@ body {
   }
   .team-list {
     row-gap: 64px;
+  }
+  .projects-filter {
+    justify-content: center;
   }
   .footer .container {
     padding-left: 108px;
