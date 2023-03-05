@@ -279,7 +279,7 @@ body {
   text-align: center;
 
   background-color: var(--title-color);
-  background-image: var(--line-grad), url(../images/hero-img.jpg);
+  background-image: var(--line-grad), url(../images/hero-img-mob.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -505,7 +505,8 @@ body {
 .projects-list {
   display: flex;
   flex-wrap: wrap;
-  gap: 45px 24px;
+  row-gap: 48px;
+  justify-content: space-between;
 }
 .projects-subtitle {
   margin-bottom: 8px;
@@ -594,6 +595,7 @@ body {
   padding-top: 23px;
   padding-bottom: 32px;
   padding-left: 16px;
+  padding-right: 16px;
 
   border: 1px solid var(--border-color);
   border-top: none;
@@ -951,11 +953,18 @@ body {
   background: var(--accent-color);
   box-shadow: none;
 }
-/*--------------------max768px-------------------------*/
+/*--------------------max767px-------------------------*/
 @media screen and (max-width: 767px) {
   .header-list,
   .header-contacts {
     display: none;
+  }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--line-grad), url(../images/hero-img-mob-2x.jpg);
+    }
   }
 }
 /*--------------------768px-1200px----------------------*/
@@ -1031,7 +1040,16 @@ body {
     max-width: 768px;
     min-height: 436px;
     padding-bottom: 108px;
+    background-image: var(--line-grad), url(../images/hero-img-tab.jpg);
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--line-grad), url(../images/hero-img-tab-2x.jpg);
+    }
+  }
+
   .hero-title {
     max-width: 496px;
     margin-bottom: 40px;
@@ -1064,6 +1082,10 @@ body {
   }
   .projects-filter {
     justify-content: center;
+  }
+  .projects-list {
+    row-gap: 72px;
+    column-gap: 24px;
   }
   .footer .container {
     padding-left: 108px;
@@ -1129,7 +1151,16 @@ body {
     min-height: 600px;
     padding-top: 188px;
     padding-bottom: 188px;
+    background-image: var(--line-grad), url(../images/hero-img.jpg);
   }
+  @media (min-device-pixel-ratio: 2),
+    (min-resolution: 192dpi),
+    (min-resolution: 2dppx) {
+    .hero {
+      background-image: var(--line-grad), url(../images/hero-img-2x.jpg);
+    }
+  }
+
   .hero-title {
     margin-bottom: 48px;
   }
